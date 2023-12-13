@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MaterialDesignWindow.WPF.AttachProperties
+namespace Polaris.MaterialDesignWindow.WPF.AttachProperties
 {
     public static class WindowEx
     {

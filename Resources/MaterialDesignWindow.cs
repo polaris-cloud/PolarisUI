@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 
-namespace MaterialDesignWindow.WPF.Resources
+namespace Polaris.MaterialDesignWindow.WPF.Resources
 {
     public static class MaterialDesignWindow
     {

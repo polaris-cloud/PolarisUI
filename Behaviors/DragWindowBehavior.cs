@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Microsoft.Xaml.Behaviors;
 
-namespace MaterialDesignWindow.WPF.Behaviors
+namespace Polaris.MaterialDesignWindow.WPF.Behaviors
 {
     public class DragWindowBehavior : Behavior<FrameworkElement>
     {

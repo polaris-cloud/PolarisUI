@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Data;
 
-namespace MaterialDesignWindow.WPF.AttachProperties
+namespace Polaris.MaterialDesignWindow.WPF.AttachProperties
 {
     public static class BindingMixins
     {

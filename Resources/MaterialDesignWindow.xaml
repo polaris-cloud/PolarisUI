@@ -2,10 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
                     xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
-                    xmlns:views="clr-namespace:MaterialDesignWindow.WPF.Resources"
-                    xmlns:behaviors="clr-namespace:MaterialDesignWindow.WPF.Behaviors"
-                    xmlns:ap="clr-namespace:MaterialDesignWindow.WPF.AttachProperties"
-                    xmlns:behaviors1="clr-namespace:MaterialDesignWindow.WPF.Behaviors">
+                    xmlns:views="clr-namespace:Polaris.MaterialDesignWindow.WPF.Resources"
+                    xmlns:behaviors="clr-namespace:Polaris.MaterialDesignWindow.WPF.Behaviors"
+                    xmlns:ap="clr-namespace:Polaris.MaterialDesignWindow.WPF.AttachProperties"
+                    >
     <Style x:Key="MaterialDesignWindow" TargetType="Window" BasedOn="{StaticResource {x:Type Window}}">
         <Style.Resources>
             <ResourceDictionary>
@@ -67,7 +67,7 @@
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers-->
                                 <b:Interaction.Behaviors>
-                                    <behaviors1:DragWindowBehavior />
+                                    <behaviors:DragWindowBehavior />
                                     <!-- FOR:off window mouse double  click-->
                                     <!--behaviors:TemplateBindingBehavior TargetTemplatePropertyPath="(WindowChrome.WindowChrome).(WindowChrome.CaptionHeight)" SourceProperty="ActualHeight"/-->
                                 </b:Interaction.Behaviors>
@@ -111,14 +111,14 @@
                                         <Button Command="{x:Static views:MaterialDesignWindow.Minimize}"
                                                
                                                 Visibility="{Binding Path=(ap:WindowEx.ShowMinimizeButton), RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                                Height="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                                                Height="{Binding Height,RelativeSource={RelativeSource FindAncestor,AncestorType=StackPanel}}"
                                                 Content="{md:PackIcon Kind=WindowMinimize ,Size=30}"
                                                 >
                                            
 
                                         </Button>
                                         <Button Command="{x:Static views:MaterialDesignWindow.ToggleMaximize}"
-                                                Height="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                                                Height="{Binding Height,RelativeSource={RelativeSource FindAncestor,AncestorType=StackPanel}}"
                                                 Visibility="{Binding Path=(ap:WindowEx.ShowMaximizeButton), RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
@@ -133,7 +133,7 @@
                                             </Button.Style>
                                         </Button>
                                         <Button Command="{x:Static views:MaterialDesignWindow.Close}"
-                                                Height="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                                                Height="{Binding Height,RelativeSource={RelativeSource FindAncestor,AncestorType=StackPanel}}"
                                                 Content="{md:PackIcon Kind=WindowClose ,Size=30}"
                                                 >
                                      

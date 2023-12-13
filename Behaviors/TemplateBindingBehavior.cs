@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Data;
 using Microsoft.Xaml.Behaviors;
-using MaterialDesignWindow.WPF.AttachProperties;
+using Polaris.MaterialDesignWindow.WPF.AttachProperties;
 
-namespace MaterialDesignWindow.WPF.Behaviors
+namespace Polaris.MaterialDesignWindow.WPF.Behaviors
 {
     public class TemplateBindingBehavior : Behavior<DependencyObject>
     {
